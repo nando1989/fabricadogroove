@@ -1,0 +1,641 @@
+:root {
+  height: auto;
+  width: 100%;
+}
+
+.container-method-landing {
+  background-image: url('../../assets/background-landingpage.png');
+  background-size: cover;
+  width: 100%;
+  height: 1500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;  
+}
+
+.logo-fabrica{
+  width: 270px;
+  height: 230px;
+  margin-top: 20px;
+}
+
+.title {
+  width: 90%;
+  height: 300px;
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+}
+
+cores{
+  color:#ff3333
+}
+
+.video {
+  width: 80%;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player {
+  width: 70%;
+  height: 350px;
+  margin-left: 5px;
+}
+
+.container-button-buy {
+  width: 90%;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: yellow;
+  
+}
+
+.container-button-buy h3{
+  text-align: center;
+}
+
+.button-buy {
+  width: 30%;
+  height: 70px;
+  border-radius:5px;
+  font-size: 50px;
+  background-color: greenyellow;
+  cursor: pointer;
+}
+
+.container-button-buy h3{
+  color: #fff;
+  font-size: 25px;
+  align-items: center;
+  }
+
+.button-buy:hover{
+  background-color: #02922d;
+  color: #fff;
+}
+
+.button-buy:active{
+  transform: scale(0.95);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.pulo-do-gato-logo {
+  width: 100vw;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.img-nando {
+  width: 370px;
+  height: 300px;
+}
+
+.pulo-do-gato-bass {
+  width: 100vw;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+
+.container-pulo-do-gato {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-pulo-do-gato {
+  width: 300px;
+  height: 180px;
+
+}
+
+.container-logo {
+  width: 100%;
+  height: 350px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.img-bass {
+  width: 100%;
+  height: 300px;
+
+}
+
+.container-target {
+  width: 100vw;
+  height: 90px;
+  background-color: rgb(78, 26, 26);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.session-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: aliceblue;
+  text-align: center;
+}
+
+.container-main {
+  width: 100%;
+  height: 5300px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  background-color: #000000;
+}
+
+.session-title {
+  width: 100%;
+  height: 50px;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lesson {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  margin: 0;
+
+}
+
+.lesson2 {
+  width: 70%;
+  height: 200px;
+  display: flex;
+  margin: 0;
+
+}
+
+.video-promotion {
+  width: 70vw;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.videolesson {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.promo-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.promo-content {
+  display: flex;
+  position: relative;
+  max-width: 30%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: #fff solid 2px;
+}
+
+.promo-image {
+  width: 80vw;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.close-button {
+  position: absolute;
+  top: 8px;
+  right: 5px;
+  background: #ff3333;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  font-size: 86px;
+  width: 100px;
+  height: 100px;
+  margin: 15px;
+}
+
+.container-img-apostila {
+  width: 50%;
+  height: 800px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: #fff;
+  flex-direction: column;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.img-apostila {
+  width: 500px;
+  height: 700px;
+}
+
+.container-img-apostila h2 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
+  width: 100%;
+  height: 20px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-img-capa {
+  width: 100%;
+  height: 2500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  flex-direction: column;
+  margin-bottom: 20px;
+  background: linear-gradient(to bottom, black 20%, white);
+
+}
+
+.img-capa {
+  width: 1450px;
+  height: 2000px;
+}
+
+.container-img-print{
+  width: 100%;
+  height: 1500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+  color: yellow;
+  font-size: 30px;
+}
+
+.img-dep{
+  width: 450px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 50px;
+}
+
+.button-buy-footer {
+  width: 30%;
+  height: 70px;
+  border-radius: 20px;
+  background-color: greenyellow;
+  margin-top: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+.button-buy-footer:hover {
+  background-color: #02922d;
+  color: #fff;
+}
+
+.button-buy-footer:active{
+  transform: scale(0.95); 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.container-muito-mais{
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+}
+
+
+
+@media (max-width: 768px) {
+
+  .logo-fabrica{
+    margin-top: 20px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .container-method-landing {
+    background-image: url('../../assets/background-landingpage.png');
+    background-size: cover;
+    width: 100vw;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title {
+    width: 90%;
+    height: 280px;
+    margin-top: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+  }
+
+  .video {
+    width: 80%;
+    height: 250px;
+  }
+
+  .player {
+    width: 100%;
+    height: 250px;
+    margin-left: 5px;
+  }
+
+  .container-button-buy {
+    width: 90%;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .button-buy {
+    width: 50%;
+    height: 60px;
+    border-radius: 5px;
+    background-color: greenyellow;
+    font-size: 20px;
+  }
+
+  .pulo-do-gato-logo {
+    width: 100vw;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img-nando {
+    width: 370px;
+    height: 300px;
+  }
+
+  .pulo-do-gato-bass {
+    width: 100vw;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+  }
+
+ 
+
+  .container-pulo-do-gato {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img-pulo-do-gato {
+    width: 300px;
+    height: 180px;
+  }
+
+  .container-logo {
+    width: 100%;
+    height: 350px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img-bass {
+    width: 100%;
+    height: 300px;
+  }
+
+  .container-target {
+    width: 100vw;
+    height: 90px;
+    background-color: rgb(78, 26, 26);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .session-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    text-align: center;
+  }
+
+  .container-button-buy h3{
+    display: none;
+    }
+
+  .session-title {
+    width: 100%;
+    height: 50px;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  cores{
+    color:#ff3333
+  }
+  .promo-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .promo-content {
+    display: flex;
+    position: relative;
+    max-width: 80%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: #fff solid 2px;
+  }
+
+  .promo-image {
+    width: 80vw;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 8px;
+    right: 5px;
+    background: #ff3333;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .container-main {
+    width: 100%;
+    height: 2700px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .container-title-apostila {
+    width: 100%;
+    height: 100px;
+    color: rgb(229, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    color: yellow;
+  }
+
+  .title-apostila {}
+
+  .container-img-apostila {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    flex-direction: column;
+    font-size: 20px;
+  }
+
+  .img-apostila {
+    width: 60%;
+    height: 300px;
+    margin: 0;
+  }
+
+  .container-img-apostila h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
+    width: 100%;
+    height: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container-img-capa {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    flex-direction: column;
+    margin-bottom: 20px;
+    background: linear-gradient(to bottom, black 20%, white);
+  }
+
+  .img-capa {
+    width: 80%;
+    height: 400px;
+  }
+
+  .button-buy-footer {
+    width: 50%;
+    height: 40px;
+    border-radius: 3px;
+    background-color: greenyellow;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+  .container-muito-mais{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+  }
+
+  .container-img-print{
+    width: 100%;
+    height: 1100px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    color: yellow;
+    font-size: 15px;
+    margin: 0;
+  }
+  
+  .img-dep{
+    width: 270px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+  }
+
+
+
+
+
+}
