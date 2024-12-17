@@ -12,8 +12,8 @@ const QuizAge = () => {
 
   return (
 
-    <div id="container-quiz">
-      <div id="container-logo">
+    <div id="container-quiz-age">
+      <div id="container-logo-age">
         <img class="Apostila-capa" alt="apostila" src={Apostila} />
       </div>
 
@@ -26,8 +26,7 @@ const QuizAge = () => {
       </div>
 
       <div id="container-text">
-        <h1 class="question">Qual a sua maior dificuldade em teoria musical?</h1>
-        <p>Escolha uma das opções abaixo!</p>
+        <h1 class="question-age">Qual a sua maior dificuldade em teoria musical?</h1>
       </div>
 
       <div id="container-buttons2" onClick={goToquizDificult}>
