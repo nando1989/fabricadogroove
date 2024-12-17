@@ -15,7 +15,7 @@ const QuizDificult = () => {
 
       <div id="container-logo">
         
-      <img class="Apostila-capa" src={Apostila} />
+      <img class="Apostila-capa" alt="apostila" src={Apostila} />
       </div>
 
       <div id="container-progress-difficult">

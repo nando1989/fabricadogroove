@@ -32,7 +32,7 @@ const Register = () => {
         
         
         <form className='container-register' onSubmit={handleRegister}>
-          <img className='img-logo' src={Logo}/>
+          <img className='img-logo'  alt="logo" src={Logo}/>
           <h2>Cadastro</h2>
           
           

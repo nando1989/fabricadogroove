@@ -16,7 +16,7 @@ const QuizGender = () => {
       <div id="container-quiz">
 
         <div id="container-logo">
-        <img class="Apostila-capa" src={Apostila} />
+        <img class="Apostila-capa" alt="apostila" src={Apostila} />
         </div>
 
         <div id="container-progress-gender">
@@ -37,13 +37,13 @@ const QuizGender = () => {
         <div id="container-buttons">
 
           <div id="img-male-gender" onClick={goToquizAge}>
-            <img class="bass-Man-gender" src={BassMan} />
+            <img class="bass-Man-gender" alt="bassman" src={BassMan} />
             
           </div>
 
         
             <div id="img-female-gender" onClick={goToquizAge}  >
-              <img class="bass-woman-gender" src={BassWoman} />
+              <img class="bass-woman-gender" alt="basswoman" src={BassWoman} />
               
             </div>
 

@@ -17,7 +17,7 @@ const QuizInsta = () => {
     <div id="container-quiz2">
 
       <div id="container-logo2">
-      <img class="Apostila-capa" src={Apostila} />
+      <img class="Apostila-capa" alt="apostila"src={Apostila} />
       </div>
 
       <div id="container-text2">
@@ -30,15 +30,12 @@ const QuizInsta = () => {
 
      <div id="container-buttons4" >
           <div id="Button-video" >
-            <h2>Quero evoluir >></h2>
+            <h2>'Quero evoluir >>'</h2>
           </div>
         </div>
     
     </div>
-
-    
-
-  )
+    )
 }
 
 export default QuizInsta
