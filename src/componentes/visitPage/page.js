@@ -9,6 +9,7 @@ import Depoimento1 from '../../assets/depoimento1.jpg';
 import Depoimento2 from '../../assets/depo2.jpg';
 import Depoimento3 from '../../assets/depo3.jpg';
 import LogoFabrica from '../../assets/logo-pulo-do-gato.png';
+import { Link } from 'react-router-dom';
 
 
 
@@ -21,9 +22,12 @@ const VisitPage = () => {
   return (
     <>
       <div className="container-method-landing">
-        <img className="logo-fabrica" src={LogoFabrica} alt="Promoção" />
+      <Link to="/quizGender">
+  <img className="logo-fabrica" src={LogoFabrica} alt="Promoção" />
+</Link>
+
         <div class="title">
-          <h1>O <cores> pulo do Gato </cores>para para estudar em qualquer lugar</h1>
+          <h1>O <cores> pulo do Gato </cores>para estudar em qualquer lugar</h1>
           <h2>Assita este video!</h2>
         </div>
 
@@ -41,9 +45,6 @@ const VisitPage = () => {
       </div>
 
       <div className="container-main">
-        {/* <div className="container-title-apostila">
-
-        </div> */}
 
         <div className="container-img-apostila">
           <h2>Afinação</h2>
