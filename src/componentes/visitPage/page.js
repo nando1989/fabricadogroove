@@ -1,48 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './styles.css';
-
-import Curso from '../../assets/curso.png';
 import Afinação from '../../assets/AFINAÇÃO.png';
 import Cifra from '../../assets/cifra.png';
 import Tablatura from '../../assets/TABLATURA.png';
 import Intervalos from '../../assets/INTERVALOS.png';
 import Acordes from '../../assets/ACORDES.png';
-import Escalas from '../../assets/ESCALA MAIOR.png';
-import Coordenação from '../../assets/EXERCICIOS DE COORDENAÇÃO.png';
-import Arrow from '../../assets/TECNICA ARROW.png';
-import Apostila from '../../assets/CAPA.png';
 import Depoimento1 from '../../assets/depoimento1.jpg';
 import Depoimento2 from '../../assets/depo2.jpg';
 import Depoimento3 from '../../assets/depo3.jpg';
 import LogoFabrica from '../../assets/logo-pulo-do-gato.png';
-import { useNavigate } from 'react-router-dom';
+
 
 
 const VisitPage = () => {
-  // const [showPromo, setShowPromo] = useState(false);
-  // const closePromo = () => setShowPromo(false);
 
-  // useEffect(() => {
-  //   const timer = setTimeout(() => setShowPromo(true), 3000);
-  //   return () => clearTimeout(timer);
-  // }, []);
-
- 
   const goToHotmart = () => {
     window.open('https://pay.hotmart.com/N96501436V?checkoutMode=10&bid=1731259011708');
   }
 
   return (
     <>
-      {/* {showPromo && (
-        <div className="promo-modal">
-          <div className="promo-content">
-            <img src={Curso} alt="Promoção" className="promo-image" />
-            <button className="close-button" onClick={closePromo}>x</button>
-          </div>
-        </div>
-      )} */}
-
       <div className="container-method-landing">
         <img className="logo-fabrica" src={LogoFabrica} alt="Promoção" />
         <div class="title">
