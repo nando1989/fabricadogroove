@@ -2,15 +2,8 @@ import React from 'react';
 import './style.css';
 import Insta from '../../../assets/instaFabrica.png'
 import Apostila from '../../../assets/CAPA.png'
-import { useNavigate } from 'react-router-dom';
 
 const QuizInsta = () => {
-
-  const navigate = useNavigate();
-  const goToquizInsta = () => {
-    navigate('/quizInsta');
-  }
-
 
   return (
 
@@ -26,7 +19,7 @@ const QuizInsta = () => {
 
       </div>
      
-     <img id="imgInsta" src={Insta} />
+     <img id="imgInsta" alt="instagram" src={Insta} />
 
      <div id="container-buttons4" >
           <div id="Button-video" >
