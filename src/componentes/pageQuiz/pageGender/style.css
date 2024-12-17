@@ -1,5 +1,5 @@
 
-#container-quiz{
+#container-quiz-gender{
   width: 100vw;
   height: 100vh;
   background-color: rgb(27, 36, 36);
@@ -62,7 +62,7 @@
   justify-content: center;
 }
 
-#container-buttons{
+#container-buttons-gender{
   width: 100vw;
   height: 40vh;
   display: flex;
@@ -119,8 +119,8 @@
 
 
 @media (max-width: 768px){
-  #container-quiz{
-    width: 90vw;
+  #container-quiz-gender{
+    width: 100vw;
     height: 100vh;
     background-color: rgb(27, 36, 36);
     display: flex;
@@ -130,13 +130,13 @@
   }
   
   #container-logo{
-    width: 300px;
+    width: 100%;
     height: 250px;
   }
   
   #container-progress-gender{
     width: 85%;
-    height: 15px;
+    height: 10px;
     display: flex;
     flex-direction: row;
     align-items:center;
@@ -176,15 +176,15 @@
   
   .question{
     width: 100vw;
-    height: 50px;
+    height: 40px;
     color: aliceblue;
     display: flex;
     justify-content: center;
   }
   
-  #container-buttons{
+  #container-buttons-gender{
     width: 90vw;
-    height: 40vh;
+    height: 12rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -192,8 +192,8 @@
   }
   
   #img-male-gender{
-    width: 170px;
-    height: 200px;
+    width: 140px;
+    height: 170px;
     margin: 10px;
     border: solid white 2px;
     border-radius: 10px;
@@ -206,8 +206,8 @@
   }
   
   #img-female-gender{
-    width: 170px;
-    height: 200px;
+    width: 140px;
+    height: 170px;
     margin: 10px;
     border: solid white 2px;
     border-radius: 10px;
@@ -226,12 +226,12 @@
   }
   
   .bass-Man-gender{
-    width: 170px;
-    height: 200px;
+    width: 140px;
+    height: 168px;
   }
   
   .bass-woman-gender{
-    width: 170px;
-    height: 200px;
+    width: 140px;
+    height: 168px;
   }
  }
