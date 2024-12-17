@@ -1,6 +1,5 @@
 import React from 'react';
 import './style.css';
-import Logo from '../../../assets/logo-pulo-do-gato.png'
 import { useNavigate } from 'react-router-dom';
 
 import Apostila from '../../../assets/CAPA.png'

@@ -2,7 +2,6 @@ import React from 'react';
 import './style.css';
 import BassMan from '../../../assets/bassMan.png'
 import BassWoman from '../../../assets/basswoman.png'
-import Logo from '../../../assets/logo-pulo-do-gato.png'
 import Apostila from '../../../assets/CAPA.png'
 import { useNavigate } from 'react-router-dom';
 

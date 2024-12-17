@@ -4,7 +4,6 @@ import { useLocation } from 'react-router-dom';
 const UserPlaylist = () => {
   const location = useLocation();
   const { kanban } = location.state || { kanban: [] };
-  console.log(kanban); // Recebendo os dados da página anterior
 
   return (
     <div className='container-user-playlist'>
@@ -15,7 +14,6 @@ const UserPlaylist = () => {
             <h3>{playlist.name}</h3>
             <p>{playlist.notes}</p>
 
-            {/* Exibição de arquivos de áudio MP3 */}
             {playlist.mp3Files.length > 0 && (
               <div className="player-container">
                 {playlist.mp3Files.map((file, idx) => (
