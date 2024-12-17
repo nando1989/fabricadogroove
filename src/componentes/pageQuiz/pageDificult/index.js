@@ -29,8 +29,7 @@ const QuizDificult = () => {
       </div>
 
       <div id="container-text" >
-        <h1 class="question">Como avalia seu nivel no contrabaixo?</h1>
-        <p>Escolha uma das opções abaixo!</p>
+        <h1 class="question-dificult">Como avalia seu nivel no contrabaixo?</h1>
       </div>
 
       <div id="container-buttons2" onClick={goToquizResponseDificult} >
