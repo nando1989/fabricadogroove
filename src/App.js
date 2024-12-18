@@ -16,13 +16,13 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<VisitPage />} />
+        <Route path="/" element={<QuizGender />} />
         <Route path="/login" element={<Login />} />
         <Route path="/visitPage" element={<VisitPage />} />
         <Route path="/register" element={<Register />} />
         <Route path="/playlist" element={<Playlist />} />
         <Route path="/user-playlist" element={<Login />} /> 
-        <Route path="/quizGender" element={<QuizGender />} /> 
+        <Route path="/quizlanding" element={<VisitPage />} /> 
         <Route path="/quizAge" element={<QuizAge />} /> 
         <Route path="/quizDificult" element={<QuizDificult />} /> 
         <Route path="/quizResponseDificult" element={<QuizResponseDificult />} /> 

@@ -7,7 +7,7 @@ const QuizTime = () => {
 
   const navigate = useNavigate();
   const goToquizInsta = () => {
-    navigate('/');
+    navigate('/quizlanding');
   }
 
 
