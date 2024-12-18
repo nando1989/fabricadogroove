@@ -9,7 +9,6 @@ import Depoimento1 from '../../assets/depoimento1.jpg';
 import Depoimento2 from '../../assets/depo2.jpg';
 import Depoimento3 from '../../assets/depo3.jpg';
 import LogoFabrica from '../../assets/logo-pulo-do-gato.png';
-import { Link } from 'react-router-dom';
 
 
 
@@ -22,9 +21,9 @@ const VisitPage = () => {
   return (
     <>
       <div className="container-method-landing">
-        <Link to="/quizGender">
+        
           <img className="logo-fabrica" src={LogoFabrica} alt="Promoção" />
-        </Link>
+        
 
         <div class="title">
           <h1>O <cores> pulo do Gato </cores>para estudar em qualquer lugar</h1>
