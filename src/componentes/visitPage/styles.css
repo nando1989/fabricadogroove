@@ -537,14 +537,14 @@ cores{
     align-items: center;
   }
 
-  .container-title-apostila {
+  .title-apostila {
     width: 100%;
-    height: 100px;
+    height: 70px;
     color: rgb(229, 255, 0);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 15px;
+    font-size: 25px;
     color: yellow;
   }
 
@@ -552,7 +552,7 @@ cores{
 
   .container-img-apostila {
     width: 100%;
-    height: 450px;
+    height: 470px;
     display: flex;
     justify-content: space-around;
     align-items: center;

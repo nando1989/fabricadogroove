@@ -22,13 +22,12 @@ const VisitPage = () => {
   return (
     <>
       <div className="container-method-landing">
-      <Link to="/quizGender">
-  <img className="logo-fabrica" src={LogoFabrica} alt="Promoção" />
-</Link>
+        <Link to="/quizGender">
+          <img className="logo-fabrica" src={LogoFabrica} alt="Promoção" />
+        </Link>
 
         <div class="title">
           <h1>O <cores> pulo do Gato </cores>para estudar em qualquer lugar</h1>
-          <h2>Assita este video!</h2>
         </div>
 
         <div class="video">
