@@ -71,7 +71,7 @@ const VisitPage = () => {
         </div>
 
         <div className="container-img-print">
-        <h2>e muito mais...</h2>
+          <branco>e muito mais...</branco>
           <h2>Veja abaixo alguns depoimentos</h2>
           <img className="img-dep" src={Depoimento1} alt="Promoção" />
           <img className="img-dep" src={Depoimento2} alt="Promoção" />

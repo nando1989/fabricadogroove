@@ -308,6 +308,10 @@ cores{
   color: yellow;
   font-size: 30px;
 }
+branco{
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+}
 
 .img-dep{
   width: 450px;
