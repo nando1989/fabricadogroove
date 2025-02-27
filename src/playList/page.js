@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import '../playList/styles.css';
+import './styles.css';
 import { useNavigate } from 'react-router-dom';
 
 const Playlist = () => {

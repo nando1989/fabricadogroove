@@ -40,7 +40,7 @@ const QuizResponseDificult = () => {
 
         <div id="container-buttons4" >
           <div id="Button-video" onClick={goToquizTime}>
-            <h2>Eu quero evoluir >></h2>
+            <h2>Eu quero evoluir</h2>
           </div>
         </div>
         
