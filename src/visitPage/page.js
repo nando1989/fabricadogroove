@@ -18,9 +18,9 @@ const VisitPage = () => {
           <h1>O <cores> pulo do Gato </cores>para estudar em qualquer lugar</h1>
         </div>
 
-        <div className="container-video-slide">
-          <div className="video-slide-area">
-            <VideoSlider />
+        <div className="container-modulos">
+          <div className="modulo-iniciante">
+           
           </div>
         </div>
 

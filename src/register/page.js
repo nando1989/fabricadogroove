@@ -45,7 +45,7 @@ const Register = () => {
             });
 
             alert('Usuário cadastrado com sucesso!');
-            navigate('/login');
+            navigate('/');
         } catch (error) {
             const errorMessages = {
                 'auth/email-already-in-use': 'O e-mail já está em uso.',
