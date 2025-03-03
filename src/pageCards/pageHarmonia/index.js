@@ -16,8 +16,9 @@ function App() {
 
   return (
     <div className="container">
-      <Sidebar videos={videos} setCurrentVideo={setCurrentVideo} />
       <VideoPlayer videoUrl={currentVideo} />
+      <Sidebar videos={videos} setCurrentVideo={setCurrentVideo} />
+      
     </div>
   );
 }

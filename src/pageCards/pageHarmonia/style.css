@@ -94,6 +94,13 @@
 
 
 @media (max-width: 768px){
+
+  .container {
+    display: flex;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
   #container-quiz-age{
     width: 100vw;
     height: 100vh;
