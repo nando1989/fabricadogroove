@@ -1,0 +1,237 @@
+
+#container-quiz-gender{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(27, 36, 36);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#container-logo{
+  width: 300px;
+  height: 250px;
+}
+
+#container-progress-gender{
+  width: 1000px;
+  height: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: center;
+  margin-top: 30px;
+
+}
+
+#progress1{
+  width: 100px;
+  height: 15px;
+  background-color: rgb(10, 202, 10);
+  border-radius: 5px 0px 0px 5px;
+}
+#progress2{
+  width: 400px;
+  height: 15px;
+  background-color: rgb(12, 19, 59);
+  border-radius: 0px 5px 5px 0px;
+}
+
+.logo-pulo-do-gato{
+  width: 300px;
+  height: 250px;
+}
+
+#container-text{
+  width: 100vw;
+  height: 100px;
+  
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.question{
+  width: 100vw;
+  height: 50px;
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+}
+
+#container-buttons-gender{
+  width: 100vw;
+  height: 40vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#img-male-gender{
+  width: 300px;
+  height: 325px;
+  margin: 10px;
+  border: solid white 2px;
+  border-radius: 10px;
+  background-color: rgb(12, 19, 59);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: aliceblue;
+  align-items: center;
+}
+
+#img-female-gender{
+  width: 300px;
+  height: 325px;
+  margin: 10px;
+  border: solid white 2px;
+  border-radius: 10px;
+  background-color: rgb(12, 19, 59);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: aliceblue;
+}
+
+
+
+#img-male:hover,
+#img-female:hover {
+  border-color:rgb(10, 202, 10);;
+}
+
+.bass-Man-gender{
+  width: 300px;
+  height: 325px;
+}
+
+.bass-woman-gender{
+  width: 300px;
+  height: 104%;
+}
+
+
+
+
+@media (max-width: 768px){
+  #container-quiz-gender{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(27, 36, 36);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #container-logo{
+    width: 100%;
+    height: 250px;
+  }
+  
+  #container-progress-gender{
+    width: 85%;
+    height: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    margin-top: 30px;
+  
+  }
+  
+  #progress1{
+    width: 10px;
+    height: 15px;
+    background-color: rgb(10, 202, 10);
+    border-radius: 5px 0px 0px 5px;
+  }
+  #progress2{
+    width: 400px;
+    height: 15px;
+    background-color: rgb(12, 19, 59);
+    border-radius: 0px 5px 5px 0px;
+  }
+  
+  .logo-pulo-do-gato{
+    width: 300px;
+    height: 250px;
+  }
+  
+  #container-text{
+    width: 90vw;
+    height: 100px;
+    
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .question{
+    width: 100vw;
+    height: 40px;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #container-buttons-gender{
+    width: 90vw;
+    height: 12rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #img-male-gender{
+    width: 140px;
+    height: 160px;
+    margin: 10px;
+    border: solid white 2px;
+    border-radius: 10px;
+    background-color: rgb(12, 19, 59);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: aliceblue;
+    align-items: center;
+  }
+  
+  #img-female-gender{
+    width: 140px;
+    height: 160px;
+    margin: 10px;
+    border: solid white 2px;
+    border-radius: 10px;
+    background-color: rgb(12, 19, 59);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: aliceblue;
+  }
+  
+  
+  
+  #img-male:hover,
+  #img-female:hover {
+    border-color:rgb(10, 202, 10);;
+  }
+  
+  .bass-Man-gender{
+    width: 140px;
+    height: 168px;
+  }
+  
+  .bass-woman-gender{
+    width: 140px;
+    height: 168px;
+  }
+ }

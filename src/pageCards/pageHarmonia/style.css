@@ -1,0 +1,181 @@
+
+#container-quiz-age{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(27, 36, 36);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#container-logo{
+  width: 300px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container-progress-age{
+  width: 100%;
+  height: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: center;
+  margin-top: 30px;
+
+}
+
+#progress3{
+  width: 50px;
+  height: 15px;
+  background-color: rgb(10, 202, 10);
+  border-radius: 5px 0px 0px 5px;
+}
+#progress4{
+  width: 450px;
+  height: 15px;
+  background-color: rgb(12, 19, 59);
+  border-radius: 0px 5px 5px 0px;
+}
+
+.Apostila-capa{
+  width: 200px;
+  height: 250px;
+}
+
+.question{
+  width: 100vw;
+  height: 50px;
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+}
+
+#container-buttons{
+  width: 100vw;
+  height: 40vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#img-male:hover,
+#img-female:hover {
+  border-color:rgb(10, 202, 10);;
+}
+
+#container-buttons2{
+  width: 350px;
+  height: 50px;
+  margin: 10px;
+  border: solid white 2px;
+  border-radius: 10px;
+  background-color: rgb(12, 19, 59);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+}
+
+#container-buttons2:hover {
+  border-color:rgb(10, 202, 10);;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+
+
+@media (max-width: 768px){
+  #container-quiz-age{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(27, 36, 36);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #container-logo-age{
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .Apostila-capa{
+    width: 170px;
+    height: 220px;
+  }
+
+  #container-progress{
+    width: 100%;
+    height: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    margin-top: 30px;
+  
+  }
+  
+  #progress3{
+    width: 30px;
+    height: 15px;
+    background-color: rgb(10, 202, 10);
+    border-radius: 5px 0px 0px 5px;
+  }
+  #progress4{
+    width: 320px;
+    height: 15px;
+    background-color: rgb(12, 19, 59);
+    border-radius: 0px 5px 5px 0px;
+  }
+  
+  .logo-pulo-do-gato{
+    width: 300px;
+    height: 250px;
+  }
+  
+  .question-age{
+    width: 100vw;
+    height: 50px;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    text-align: center;
+    margin: none;
+  }
+  
+  
+  
+  #container-buttons2{
+    width: 350px;
+    height: 50px;
+    margin: 10px;
+    border: solid white 2px;
+    border-radius: 10px;
+    background-color: rgb(12, 19, 59);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+  }
+  
+  #container-buttons2:hover {
+    border-color:rgb(10, 202, 10);;
+  }
+  
+ }

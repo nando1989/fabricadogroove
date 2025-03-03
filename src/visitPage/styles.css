@@ -11,10 +11,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: start;  
+  justify-content: start;
 }
 
-.logo-fabrica{
+.logo-fabrica {
   width: 270px;
   height: 275px;
   margin-top: 20px;
@@ -28,7 +28,7 @@
   font-size: 30px;
 }
 
-.container-cards{
+.container-cards {
   width: 90vw;
   height: 550px;
   display: flex;
@@ -37,7 +37,7 @@
   margin: 55px;
 }
 
-.container-cards-in{
+.container-cards-in {
   width: 97%;
   height: 90%;
   display: flex;
@@ -45,46 +45,121 @@
   justify-content: center;
 }
 
-cores{
-  color:#ff3333
+cores {
+  color: #ff3333
 }
 
-.img-harmonia{
+.img-harmonia {
   width: 340px;
   border-radius: 20px;
   margin-top: 20px;
   border: solid 1px rgb(253, 253, 253);
   cursor: pointer;
-  
+
 }
 
-.img-harmonia:hover{
+.img-harmonia:hover {
   transform: scale(1.1);
-  transition: transform 0.3s ease-in-out; 
+  transition: transform 0.3s ease-in-out;
 }
 
+.container {
+  display: flex;
+  height: 100vh;
+}
 
+.sidebar {
+  width: 250px;
+  background: #333;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar button {
+  background: none;
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.sidebar button:hover {
+  background: #555;
+}
+
+.video-player {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+}
+
+.video-player video {
+  width: 80%;
+  max-width: 800px;
+  border-radius: 10px;
+}
+
+@media (max-width: 1620px) {
+
+  .container-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
 
 
 
 
 @media (max-width: 768px) {
 
-  .logo-fabrica{
-    margin-top: 20px;
-    width: 200px;
-    height: 170px;
-  }
-
   .container-method-landing {
-    background-image: url('../assets/background.png');
-    background-size: cover;
-    width: 100vw;
-    height: 800px;
+    width: 100%;
+    background-size:contain;
+    background-repeat: no-repeat;
+    height: 2000px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: start;
+    background-color: #000000;
   }
+
+  .container-cards {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-cards-in {
+    width: 97%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .img-harmonia {
+    width: 240px;
+    border-radius: 20px;
+    margin-top: 20px;
+    border: solid 1px rgb(253, 253, 253);
+    cursor: pointer;
+  
+  }
+
+  .logo-fabrica {
+    margin-top: 10px;
+    width: 200px;
+    height: 180px;
+  }
+
 
   .title {
     width: 90%;
@@ -95,12 +170,12 @@ cores{
     font-size: 20px;
   }
 
-  
-  
-  cores{
-    color:#ff3333
+
+
+  cores {
+    color: #ff3333
   }
-  
+
 
 
 

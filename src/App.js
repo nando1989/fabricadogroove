@@ -5,6 +5,10 @@ import Login from './login/page';
 import VisitPage from './visitPage/page';
 import Register from './register/page';
 import Playlist from './playList/page';
+import PageHarmonia from './pageCards/pageHarmonia';
+import PageAcordes from './pageCards/pageAcordes';
+import PageArpejos from './pageCards/pageArpejos';
+import PageSlap from './pageCards/pageSlap';
 const App = () => {
   return (
     <Router>
@@ -14,12 +18,11 @@ const App = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/playlist" element={<Playlist />} />
         <Route path="/user-playlist" element={<VisitPage/>} /> 
-        {/* <Route path="/quizlanding" element={<QuizGender/>} /> 
-        <Route path="/quizAge" element={<QuizAge/>}/> 
-        <Route path="/quizDificult" element={<QuizDificult/>} /> 
-        <Route path="/quizResponseDificult" element={<QuizResponseDificult/>} /> 
-        <Route path="/quizTime" element={<QuizTime/>} /> 
-        <Route path="/quizInsta" element={<QuizInsta/>} />  */}
+        <Route path="/harmonia" element={<PageHarmonia/>} /> 
+        <Route path="/acordes" element={<PageAcordes/>} /> 
+        <Route path="/arpejos" element={<PageArpejos/>} /> 
+        <Route path="/slap" element={<PageSlap/>} /> 
+        
       </Routes>
     </Router>
   );
