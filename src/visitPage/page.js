@@ -31,7 +31,16 @@ const VisitPage = () => {
             <img className="img-harmonia" src={Slap} alt="Promoção" />
           </div>
 
+
         </div>
+        <iframe
+          src="https://player.vimeo.com/video/246285953"
+          width="560"
+          height="315"
+          frameborder="0"
+          allow="autoplay; fullscreen"
+          allowfullscreen
+        ></iframe>
       </div>
     </>
   );
