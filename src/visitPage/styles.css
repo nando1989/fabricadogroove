@@ -16,7 +16,7 @@
 
 .logo-fabrica{
   width: 270px;
-  height: 230px;
+  height: 275px;
   margin-top: 20px;
 }
 
@@ -52,8 +52,14 @@ cores{
   width: 340px;
   border-radius: 20px;
   margin-top: 20px;
-  border: solid 1px red;
+  border: solid 1px rgb(253, 253, 253);
   cursor: pointer;
+  
+}
+
+.img-harmonia:hover{
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out; 
 }
 
 
