@@ -2,7 +2,6 @@ import React from 'react';
 import './styles.css';
 import Logo from '../assets/logo.png';
 import Harmonia from '../assets/harmonia.png';
-import Acordes from '../assets/acordes.png';
 import Arpejos from '../assets/arpejos.png';
 import Slap from '../assets/slap.png';
 import { useNavigate } from 'react-router-dom';
@@ -35,7 +34,7 @@ const VisitPage = () => {
             <img className="img-harmonia" onClick={goToHarmonia} src={Harmonia} alt="Promoção" />
           </div>
           <div className='container-cards-in'>
-            <img className="img-harmonia" onClick={goToAcordes} src={Acordes} alt="Promoção" />
+            <img className="img-harmonia" onClick={goToAcordes} alt="Promoção" />
           </div>
           <div className='container-cards-in'>
             <img className="img-harmonia" onClick={goToArpejos} src={Arpejos} alt="Promoção" />
