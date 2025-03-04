@@ -22,8 +22,8 @@
 
 @media (max-width: 768px){
   .sidebar {
-    width: 90vw;
-    height: 400px;
+    width: 91vw;
+    height: auto;
     background: #000000;
     color: white;
     padding: 19px;
