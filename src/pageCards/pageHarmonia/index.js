@@ -6,7 +6,7 @@ import './style.css';
 
 
 const videos = [
-  { title: "Aula 1 - Introdução", url: "https://www.w3schools.com/html/mov_bbb.mp4" },
+  { title: "Aula 1 - Introdução", url: "https://www.youtube.com/watch?v=01pdwjfzV8g&t=1s" },
   { title: "Aula 2 - Módulos", url: "https://www.w3schools.com/html/movie.mp4" },
   { title: "Aula 3 - Componentes", url: "https://www.w3schools.com/html/mov_bbb.mp4" },
 ];

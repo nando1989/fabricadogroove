@@ -4,7 +4,7 @@ import '../videoPlayer/style.css';
 function VideoPlayer({ videoUrl }) {
   return (
     <div className="video-player">
-      <video src={videoUrl} controls autoPlay></video>
+      <video className="video" src={videoUrl} controls autoPlay></video>
     </div>
   );
 }
