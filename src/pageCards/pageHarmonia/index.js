@@ -6,7 +6,7 @@ import './style.css';
 
 
 const videos = [
-  { title: "▶️ Aula 1 - Introdução", url: "https://vimeo.com/8260302" },
+  { title: "▶️ Aula 1 - Introdução", url: "https://player.vimeo.com/video/1115023078" },
   { title: "▶️ Aula 2 - Afinação", url: "https://player.vimeo.com/video/987654321" },
   { title: "▶️ Aula 3 - Mapeamento no braço", url: "https://player.vimeo.com/video/456789123" },
   { title: "▶️ Aula 4 - Cifras", url: "https://player.vimeo.com/video/321654987" },
@@ -17,18 +17,33 @@ const videos = [
   { title: "▶️ Aula 9 - Arpejos", url: "https://player.vimeo.com/video/852159753" },
   { title: "▶️ Aula 10 - Arpejos", url: "https://player.vimeo.com/video/654321987" },
   { title: "▶️ Aula 11 - Arpejos", url: "https://player.vimeo.com/video/951753852" },
+  
 ];
+
+
+
 
 
 function App() {
   const [currentVideo, setCurrentVideo] = useState(videos[0].url);
 
-  return (
+  return (<>
     <div className="container">
-      <VideoPlayer videoUrl={currentVideo} />
+      <VideoPlayer className="videoPlayer" videoUrl={currentVideo} />
       <Sidebar videos={videos} setCurrentVideo={setCurrentVideo} />
       
     </div>
+    <div
+      
+    >
+      <iframe
+        
+        frameBorder="0"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+        allowFullScreen
+        title="Vimeo Player"
+      ></iframe>
+    </div></>
   );
 }
 

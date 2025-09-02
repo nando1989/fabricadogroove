@@ -9,6 +9,10 @@
   justify-content: center;
 }
 
+.videoPlayer{
+  height: 300px;
+}
+
 #container-logo{
   width: 300px;
   height: 250px;
