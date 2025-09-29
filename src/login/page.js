@@ -41,6 +41,10 @@ const Login = () => {
     navigate('/visitPage');
   };
 
+  const goToFastNote = () => {
+    navigate('/fastNote');
+  };
+
   return (
     <div className="main-login">
       <div className="container-login">
@@ -83,11 +87,11 @@ const Login = () => {
           </button>
 
           <button
-            className="visitButton"
+            className="fastNoteButton"
             type="button"
-            onClick={goToMemberPage}
+            onClick={goToFastNote}
           >
-            Visitante
+          Editor de cifras
           </button>
         </form>
       </div>

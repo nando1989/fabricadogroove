@@ -1,0 +1,417 @@
+:root {
+  --bg: #f8f9fb;
+  --text: #0a0a0a;
+  --muted: #6b7280;
+  --card: #ffffff;
+  --border: #e5e7eb;
+  --accent: #111827;
+  --rose: #d9465a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#__next {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Header */
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: auto;
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(6px);
+  border-top: 1px solid var(--border);
+  border-bottom: 0;
+  min-height: var(--bottom-bar-h);
+}
+
+.container {
+  max-width: 1120px;
+  height: auto;
+  margin: 0 auto;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.arrow {
+  display: flex;
+}
+
+.arrowLeft {
+  display: flex;
+  align-items: center;
+}
+
+.arrowBtn {
+  width: 45px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.arrowRigth {
+  display: flex;
+  align-items: center;
+}
+
+.control {
+  width: 50%;
+}
+
+.arrowCenter {
+  display: flex;
+  flex-direction: column;
+}
+
+.arrowCenter {}
+
+.arrowBox {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.controlArrow {
+  display: flex;
+  flex-direction: row;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.btn {
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 999px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.btnNote {
+  border: 1px solid #8b8b8b;
+  background: #f5d4f7;
+  border-radius: 999px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: bold;
+}
+
+.btnSimbol {
+  border: 1px solid #5c5c5c;
+  background: #534c53;
+  border-radius: 999px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: bold;
+  color: #e5e7eb;
+}
+
+.btnEraser {
+  border: 1px solid #5c5c5c;
+  background: #a81f1f;
+  border-radius: 999px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: bold;
+  color: #ffffff;
+}
+
+.tenctions {
+  border: 1px solid #634401;
+  background: #ee7d31;
+  border-radius: 999px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: bold;
+  color: #e5e7eb;
+}
+
+.btn:hover {
+  background: #f3f4f6;
+}
+
+.btn-primary {
+  border-radius: 8px;
+  padding: 8px 12px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  filter: brightness(0.95);
+}
+
+.preview-title.editable {
+  cursor: text;
+}
+
+.preview-title-input {
+  width: 100%;
+  text-align: center;
+  font-weight: 800;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 10px;
+  outline: none;
+  background: #fff;
+}
+
+.preview-title-input:focus {
+  border-color: #c7d2fe;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, .2);
+}
+
+.vr {
+  width: 1px;
+  height: 24px;
+  background: var(--border);
+  margin: 0 4px;
+  display: none;
+}
+
+.label {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Grid */
+.grid {
+  max-width: 1020px;
+  min-height: 600px;
+  margin: 0 auto;
+  padding: 16px;
+  gap: 16px;
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .vr {
+    display: block;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+}
+
+/* Cards */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+
+  max-height: 600px;
+  /* limite do card */
+  overflow: auto;
+  /* aparece a barra quando passar */
+  -webkit-overflow-scrolling: touch;
+  /* scroll suave no iOS */
+  overscroll-behavior: contain;
+  /* evita puxar a página junto */
+}
+
+
+.textarea {
+  width: 100%;
+  height: 52vh;
+  resize: none;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+@media (min-width: 900px) {
+  .textarea {
+    height: 70vh;
+  }
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+/* Preview */
+
+.preview-title {
+  text-align: left;
+  font-weight: 800;
+  margin: 0 0 12px 0;
+}
+
+.section-tag {
+  color: var(--rose);
+  font-weight: 700;
+  margin: 10px 0 4px;
+  font-size: 0.9em;
+}
+
+.line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.chord {
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.bar {
+  opacity: 0.6;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
+  padding: 24px 0;
+}
+
+/* Controls */
+.control-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.range {
+  vertical-align: middle;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+}
+
+@media (min-width: 680px) {
+  .preview-wrap {
+    width: auto;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    background: #fff;
+    margin: 0 auto;
+  }
+
+  .preview-title {
+    width: auto;
+    text-align: center;
+    font-weight: 200;
+    margin: 0 0 12px 0;
+  }
+
+  .grid {
+    max-width: 1020px;
+    min-height: 500px;
+    margin: 0 auto;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .section-tag {
+    color: var(--rose);
+    font-weight: 700;
+    margin: 10px 0 4px;
+    font-size: 0.9em;
+  }
+
+  .line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .chord {
+    font-weight: 800;
+    letter-spacing: 0.5px;
+  }
+
+  .bar {
+    opacity: 0.6;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+    padding: 24px 0;
+  }
+
+  /* Controls */
+  .control-group {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .range {
+    vertical-align: middle;
+  }
+
+  .checkbox {
+    width: 16px;
+    height: 16px;
+  }
+
+  .preview-title-input {
+    width: 100%;
+    text-align: center;
+    font-weight: 800;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 6px 10px;
+    outline: none;
+    background: #fff;
+  }
+  .preview-title-editable{
+    width: 100%;
+  }
+
+  .preview-wrap{
+    width: 100%;
+  }
+}
