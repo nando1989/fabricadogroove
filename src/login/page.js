@@ -51,8 +51,6 @@ const Login = () => {
         <form className="container-form" onSubmit={handleLogin}>
           <img className="img-logo" alt="logo" src={Logo} />
 
-          <h2>Login</h2>
-
           <input
             type="email"
             value={email}

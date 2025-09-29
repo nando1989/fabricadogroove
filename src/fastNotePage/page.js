@@ -4,15 +4,14 @@ import "./styles.css";
 
 export default function FastNote() {
   const [text, setText] = useState("");
-  const textareaRef = useRef(null);
   const [fontSize, setFontSize] = useState(22);
   const [lineGap, setLineGap] = useState(10);
   const [colWidth, setColWidth] = useState(720);
-  const [showBars, setShowBars] = useState(true);
+  const [showBars] = useState(true);
   const exportRef = useRef(null);
   const [title, setTitle] = useState("Clique e escreva o título...");
   const [isEditingTitle, setIsEditingTitle] = useState(false);
-  const titleInputRef = useRef <HTMLInputElement> (null);
+  const titleInputRef = useRef(null);
   
 
   useEffect(() => {
