@@ -37,10 +37,6 @@ const Login = () => {
     navigate('/register');
   };
 
-  const goToMemberPage = () => {
-    navigate('/visitPage');
-  };
-
   const goToFastNote = () => {
     navigate('/fastNote');
   };
