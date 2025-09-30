@@ -86,7 +86,7 @@ export default function FastNote() {
   async function handleExportPNG() {
     if (!exportRef.current) return;
     const html2canvas = (await import("html2canvas")).default;
-    const canvas = await html2canvas(exportRef.current, { scale: 2, backgroundColor: "#ffffff" });
+    const canvas = await html2canvas(exportRef.current, { scale: 3, backgroundColor: "#ffffff" });
     const url = canvas.toDataURL("image/png");
     const a = document.createElement("a");
     a.href = url; a.download = `arranjo-${Date.now()}.png`; a.click();
@@ -96,7 +96,8 @@ export default function FastNote() {
     <div>
       <main className="grid">
         <section className="card" style={{ overflow: "auto" }}>
-          <div ref={exportRef} className="preview-wrap">
+          <div ref={exportRef} className="bg-white p-6 md:p-8 rounded-lg shadow"
+>
             {isEditingTitle ? (
               <input
                 
@@ -169,7 +170,7 @@ export default function FastNote() {
             <button onClick={() => insertNote("9°")} className="tenctions">9°</button>
             <button onClick={() => insertNote("11°")} className="tenctions">11°</button>
             <button onClick={() => insertNote("13°")} className="tenctions">13°</button>
-            <button onClick={() => insertNote("7m")} className="tenctions">7m</button>
+            <button onClick={() => insertNote("7M")} className="tenctions">7M</button>
             <button onClick={() => insertNote("9°")} className="tenctions">9°</button>
             <button onClick={() => insertNote("9°+")} className="tenctions">9°</button>
             <button onClick={() => insertNote("9b")} className="tenctions">9</button>
@@ -182,8 +183,8 @@ export default function FastNote() {
 
             <button onClick={() => insertNote("°")} className="btnSimbol">°</button>
             <button onClick={() => insertNote("(2x)")} className="btnSimbol">2x</button>
-            <button onClick={() => insertNote("(2x)")} className="btnSimbol">3x</button>
-            <button onClick={() => insertNote("(2x)")} className="btnSimbol">4x</button>
+            <button onClick={() => insertNote("(3x)")} className="btnSimbol">3x</button>
+            <button onClick={() => insertNote("(4x)")} className="btnSimbol">4x</button>
             <button onClick={() => insertNote("#")} className="btnSimbol">#</button>
             <button onClick={() => insertNote("b")} className="btnSimbol">b</button>
 
@@ -206,13 +207,6 @@ export default function FastNote() {
               <div className="arrowBox">
                 <div className="arrow">
                   <div className="arrowLeft">
-                    <button className="arrowBtn">^</button>
-                  </div>
-                  <div className="arrowCenter">
-                    <button className="arrowBtn">^</button>
-                    <button className="arrowBtn">^</button>
-                  </div >
-                  <div className="arrowRigth">
                     <button className="arrowBtn">^</button>
                   </div>
                 </div>
