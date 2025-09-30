@@ -182,9 +182,9 @@ export default function FastNote() {
             <button onClick={() => insertNote("4+")} className="tenctions">4+</button>
 
             <button onClick={() => insertNote("°")} className="btnSimbol">°</button>
-            <button onClick={() => insertNote("(2x)")} className="btnSimbol">2x</button>
-            <button onClick={() => insertNote("(3x)")} className="btnSimbol">3x</button>
-            <button onClick={() => insertNote("(4x)")} className="btnSimbol">4x</button>
+            <button onClick={() => insertNote(" (2x)")} className="btnSimbol">2x</button>
+            <button onClick={() => insertNote(" (3x)")} className="btnSimbol">3x</button>
+            <button onClick={() => insertNote(" (4x)")} className="btnSimbol">4x</button>
             <button onClick={() => insertNote("#")} className="btnSimbol">#</button>
             <button onClick={() => insertNote("b")} className="btnSimbol">b</button>
 
