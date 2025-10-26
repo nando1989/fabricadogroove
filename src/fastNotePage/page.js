@@ -12,17 +12,17 @@ export default function FastNote() {
   const [title, setTitle] = useState("Clique e escreva o título...");
   const [isEditingTitle, setIsEditingTitle] = useState(false);
   const titleInputRef = useRef(null);
-  
+
 
   useEffect(() => {
-  if (!isEditingTitle) return;
-  const el = titleInputRef.current;
-  if (!el) return;
-  el.focus({ preventScroll: true });
-  requestAnimationFrame(() => {
-    el.setSelectionRange(0, el.value.length); // seleciona tudo
-  });
-}, [isEditingTitle]);
+    if (!isEditingTitle) return;
+    const el = titleInputRef.current;
+    if (!el) return;
+    el.focus({ preventScroll: true });
+    requestAnimationFrame(() => {
+      el.setSelectionRange(0, el.value.length); // seleciona tudo
+    });
+  }, [isEditingTitle]);
 
   function insertSection(label) {
     setText(prev => {
@@ -35,11 +35,15 @@ export default function FastNote() {
 
   function insertNote(label) {
     setText(prev => {
-      const clean = prev.replace(/[ \t]+$/, "");
+      const clean = prev;
       const needSpace = clean.length > 0 && !clean.endsWith("\n") && !clean.endsWith("");
       return clean + (needSpace ? " " : "") + label;
     });
   }
+
+  const DeleteLast = () => {
+    setText((prev) => prev.slice(0, -1));
+  };
 
 
   function breakLine() {
@@ -47,10 +51,8 @@ export default function FastNote() {
   }
 
   function startEditTitle() {
-  setIsEditingTitle(true);
-
-  
-}
+    setIsEditingTitle(true);
+  }
 
   const parsed = useMemo(() => {
     const lines = text.replace(/\t/g, " ").split(/\r?\n/);
@@ -97,15 +99,14 @@ export default function FastNote() {
       <main className="grid">
         <section className="card" style={{ overflow: "auto" }}>
           <div ref={exportRef} className="bg-white p-6 md:p-8 rounded-lg shadow"
->
+          >
             {isEditingTitle ? (
               <input
-                
                 className="preview-title-input"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 onBlur={() => setIsEditingTitle(false)}
-                onFocus={(e) => e.currentTarget.select()}     // reforço
+                onFocus={(e) => e.currentTarget.select()}
                 onKeyDown={(e) => {
                   if (e.key === "Enter") e.currentTarget.blur();
                   if (e.key === "Escape") setIsEditingTitle(false);
@@ -153,7 +154,7 @@ export default function FastNote() {
             <button onClick={() => insertSection("Parte B")} className="btn">Parte B</button>
             <button onClick={() => insertSection("Final")} className="btn">Final</button>
             <button onClick={() => insertNote(" / ")} className="btn">Compasso</button>
-            <button onClick={() => insertNote(" / ")} className="btnEraser">Apagar</button>
+            <button onClick={() => DeleteLast()} className="btnEraser">Apagar</button>
             <button onClick={() => insertNote(" / ")} className="btnEraser">Limpar</button>
 
             <button onClick={() => insertNote("C")} className="btnNote">C</button>
@@ -187,6 +188,7 @@ export default function FastNote() {
             <button onClick={() => insertNote(" (4x)")} className="btnSimbol">4x</button>
             <button onClick={() => insertNote("#")} className="btnSimbol">#</button>
             <button onClick={() => insertNote("b")} className="btnSimbol">b</button>
+            <button onClick={() => insertNote("   ")} className="btnSimbol">Espaço</button>
 
             <div className="controlArrow">
               <div className="control">
