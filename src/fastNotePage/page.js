@@ -206,13 +206,7 @@ export default function FastNote() {
                 </label>
 
               </div>
-              <div className="arrowBox">
-                <div className="arrow">
-                  <div className="arrowLeft">
-                    <button className="arrowBtn">^</button>
-                  </div>
-                </div>
-              </div>
+              
             </div>
           </div>
 
