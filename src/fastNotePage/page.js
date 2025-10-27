@@ -9,7 +9,6 @@ export default function FastNote() {
   const [text, setText] = useState("");
   const [fontSize, setFontSize] = useState(22);
   const [lineGap, setLineGap] = useState(10);
-  const [colWidth, setColWidth] = useState(720);
   const [showBars] = useState(true);
   const exportRef = useRef(null);
   const [title, setTitle] = useState("Clique e escreva o título...");
