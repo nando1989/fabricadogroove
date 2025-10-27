@@ -197,21 +197,22 @@ export default function FastNote() {
             </div>
 
             <div className="sectionButt4">
+              <button onClick={() => insertNote("b5")} className="tenctions">b5</button>
+              <button onClick={() => insertNote("4+")} className="tenctions">4+</button>
+              <button onClick={() => insertNote("6°")} className="tenctions">6°</button>
+              <button onClick={() => insertNote("6b")} className="tenctions">6b</button>
               <button onClick={() => insertNote("7°")} className="tenctions">7°</button>
               <button onClick={() => insertNote("7M")} className="tenctions">7M</button>
               <button onClick={() => insertNote("11°")} className="tenctions">11°</button>
-              <button onClick={() => insertNote("13°")} className="tenctions">13°</button>
-              <button onClick={() => insertNote("6°")} className="tenctions">6°</button>
-              <button onClick={() => insertNote("6b")} className="tenctions">6b</button>
+              <button onClick={() => insertNote("11°+")} className="tenctions">11°</button>
+              <button onClick={() => insertNote("11°b")} className="tenctions">11°b</button>
               <button onClick={() => insertNote("9°")} className="tenctions">9°</button>
               <button onClick={() => insertNote("9°+")} className="tenctions">9°+</button>
               <button onClick={() => insertNote("9b")} className="tenctions">9b</button>
-              <button onClick={() => insertNote("11")} className="tenctions">11</button>
               <button onClick={() => insertNote("13°")} className="tenctions">13°</button>
               <button onClick={() => insertNote("13°+")} className="tenctions">13°+</button>
               <button onClick={() => insertNote("13°b")} className="tenctions">13°b</button>
-              <button onClick={() => insertNote("b5")} className="tenctions">b5</button>
-              <button onClick={() => insertNote("4+")} className="tenctions">4+</button>
+
               <button onClick={() => insertNote("°")} className="tenctions">°</button>
             </div>
             <div className="sectionButt1">
