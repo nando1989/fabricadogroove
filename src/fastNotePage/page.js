@@ -105,7 +105,7 @@ export default function FastNote() {
 
 
   return (
-    <div>
+    <div className="display">
       <main className="grid">
         <section className="card" style={{ overflow: "auto" }}>
           <div ref={exportRef} className="pauta"
@@ -163,63 +163,73 @@ export default function FastNote() {
       <header className="header">
         <div className="container">
           <div className="controls">
-
-            <div className="sectionButt2">
-              <button onClick={() => insertSection("Intro")} className="btn">Intro</button>
-              <button onClick={() => insertNote(" / ")} className="btn">/ Compasso /</button>
-              <button onClick={breakLine} className="btn">Quebra de Linha</button>
-              <button onClick={() => insertSection("Parte A")} className="btn">Parte A</button>
-              <button onClick={() => insertSection("Parte B")} className="btn">Parte B</button>
-              <button onClick={() => insertSection("Refrão")} className="btn">Refrão</button>
-              <button onClick={() => insertSection("Verso")} className="btn">Verso</button>
-              <button onClick={() => insertSection("Ponte")} className="btn">Ponte</button>
-              <button onClick={() => insertSection("Final")} className="btn">Final</button>
-            </div>
-
-            <div className="sectionButt3">
-              <button onClick={() => insertNote("C")} className="btnNote">C</button>
-              <button onClick={() => insertNote("D")} className="btnNote">D</button>
-              <button onClick={() => insertNote("E")} className="btnNote">E</button>
-              <button onClick={() => insertNote("F")} className="btnNote">F</button>
-              <button onClick={() => insertNote("G")} className="btnNote">G</button>
-              <button onClick={() => insertNote("A")} className="btnNote">A</button>
-              <button onClick={() => insertNote("B")} className="btnNote">B</button>
-
-            </div>
-            <div className="sectionButt3">
-              <button onClick={() => insertNote("M")} className="btnNote">M</button>
-              <button onClick={() => insertNote("m")} className="btnNote">m</button>
-              <button onClick={() => insertNote(" 𝄇 ")} className="btnNote">𝄇</button>
-              <button onClick={() => insertNote(" 2x")} className="btnNote">2x</button>
-              <button onClick={() => insertNote(" 3x")} className="btnNote">3x</button>
-              <button onClick={() => insertNote("#")} className="btnNote">#</button>
-              <button onClick={() => insertNote("b")} className="btnNote">b</button>
-            </div>
-
-            <div className="sectionButt4">
-              <button onClick={() => insertNote("b5")} className="tenctions">b5</button>
-              <button onClick={() => insertNote("4+")} className="tenctions">4+</button>
-              <button onClick={() => insertNote("6°")} className="tenctions">6°</button>
-              <button onClick={() => insertNote("6b")} className="tenctions">6b</button>
-              <button onClick={() => insertNote("7°")} className="tenctions">7°</button>
-              <button onClick={() => insertNote("7M")} className="tenctions">7M</button>
-              <button onClick={() => insertNote("11°")} className="tenctions">11°</button>
-              <button onClick={() => insertNote("11°+")} className="tenctions">11°</button>
-              <button onClick={() => insertNote("11°b")} className="tenctions">11°b</button>
-              <button onClick={() => insertNote("9°")} className="tenctions">9°</button>
-              <button onClick={() => insertNote("9°+")} className="tenctions">9°+</button>
-              <button onClick={() => insertNote("9b")} className="tenctions">9b</button>
-              <button onClick={() => insertNote("13°")} className="tenctions">13°</button>
-              <button onClick={() => insertNote("13°+")} className="tenctions">13°+</button>
-              <button onClick={() => insertNote("13°b")} className="tenctions">13°b</button>
-
-              <button onClick={() => insertNote("°")} className="tenctions">°</button>
-            </div>
-            <div className="sectionButt1">
+            <div className="areaBtt">
+              <div className="sectionButt1">
               <Space onClick={() => insertNote("   ")} className="btnSpace" />
               <Undo2 size={10} onClick={() => DeleteLast()} className="btnEraser" />
               <Download onClick={handleExportPNG} className="btnDownload" />
             </div>
+              <div className="titleBtt"><p>Trechos</p></div>
+              <div className="sectionButt2">
+                <button onClick={() => insertSection("Intro")} className="btnNote">Intro</button>
+                <button onClick={breakLine} className="btnNote">Quebra de Linha</button>
+                <button onClick={() => insertSection("Parte A")} className="btnNote">Parte A</button>
+                <button onClick={() => insertSection("Parte B")} className="btnNote">Parte B</button>
+                <button onClick={() => insertSection("Refrão")} className="btnNote">Refrão</button>
+                <button onClick={() => insertSection("Verso")} className="btnNote">Verso</button>
+                <button onClick={() => insertSection("Ponte")} className="btnNote">Ponte</button>
+                <button onClick={() => insertSection("Final")} className="btnNote">Final</button>
+              </div>
+            </div>
+            <div className="areaBtt">
+              <div className="titleBtt"><p>Notas</p></div>
+              <div className="sectionButt3">
+                <button onClick={() => insertNote("C")} className="btnNote">C</button>
+                <button onClick={() => insertNote("D")} className="btnNote">D</button>
+                <button onClick={() => insertNote("E")} className="btnNote">E</button>
+                <button onClick={() => insertNote("F")} className="btnNote">F</button>
+                <button onClick={() => insertNote("G")} className="btnNote">G</button>
+                <button onClick={() => insertNote("A")} className="btnNote">A</button>
+                <button onClick={() => insertNote("B")} className="btnNote">B</button>
+              </div>
+            </div>
+            <div className="areaBtt">
+              <div className="titleBtt"><p>Simbolos</p></div>
+              <div className="sectionButt3">
+                
+                <button onClick={() => insertNote("M")} className="btnNote">M</button>
+                <button onClick={() => insertNote("m")} className="btnNote">m</button>
+                <button onClick={() => insertNote("#")} className="btnNote">#</button>
+                <button onClick={() => insertNote("b")} className="btnNote">b</button>
+                <button onClick={() => insertNote(" / ")} className="btnNote">/</button>
+                <button onClick={() => insertNote(" 𝄇 ")} className="btnNote">𝄇</button>
+                <button onClick={() => insertNote(" 2x")} className="btnNote">2x</button>
+                <button onClick={() => insertNote(" 3x")} className="btnNote">3x</button>
+                
+              </div>
+            </div>
+            <div className="areaBtt">
+              <div className="titleBtt"><p>Tensões</p></div>
+              <div className="sectionButt4">
+                <button onClick={() => insertNote("b5")} className="tenctions">b5</button>
+                <button onClick={() => insertNote("4+")} className="tenctions">4+</button>
+                <button onClick={() => insertNote("6°")} className="tenctions">6°</button>
+                <button onClick={() => insertNote("6b")} className="tenctions">6b</button>
+                <button onClick={() => insertNote("7°")} className="tenctions">7°</button>
+                <button onClick={() => insertNote("7M")} className="tenctions">7M</button>
+                <button onClick={() => insertNote("11°")} className="tenctions">11°</button>
+                <button onClick={() => insertNote("11°+")} className="tenctions">11°</button>
+                <button onClick={() => insertNote("11°b")} className="tenctions">11°b</button>
+                <button onClick={() => insertNote("9°")} className="tenctions">9°</button>
+                <button onClick={() => insertNote("9°+")} className="tenctions">9°+</button>
+                <button onClick={() => insertNote("9b")} className="tenctions">9b</button>
+                <button onClick={() => insertNote("13°")} className="tenctions">13°</button>
+                <button onClick={() => insertNote("13°+")} className="tenctions">13°+</button>
+                <button onClick={() => insertNote("13°b")} className="tenctions">13°b</button>
+                <button onClick={() => insertNote("°")} className="tenctions">°</button>
+              </div>
+            </div>
+            
 
             <div className="controlArrow">
               <div className="control">

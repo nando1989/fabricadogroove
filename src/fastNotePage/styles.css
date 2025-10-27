@@ -39,6 +39,13 @@ body {
   min-height: var(--bottom-bar-h);
 }
 
+.display {
+  max-width: 80vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
 .container {
   max-width: 1120px;
   height: auto;
@@ -260,6 +267,8 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 5px;
   width: 100%;
+  border-top: 1px solid gray;
+  padding-top: 10px;
 }
 
 
@@ -271,18 +280,27 @@ body {
 }
 
 /* Cards */
-.card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 14px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
-  height: 100%;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior: contain;
-  margin: 5px;
-}
+
+    .grid {
+    width: 100%;
+    max-height: 50vh;
+    margin: 0 auto;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    margin: 5px;
+  }
 
 
 .textarea {
@@ -357,48 +375,109 @@ body {
   width: 16px;
   height: 16px;
 }
+
+.areaBtt {
+  overflow-x: auto;
+  border-top: 1px solid gray;
+  width: 100%;
+}
+
 .sectionButt2 {
-    display: flex;
-    /* pra alinhar os botões na horizontal */
-    gap: 10px;
-    /* espaço entre botões */
-    overflow-x: auto;
-    /* ativa scroll horizontal */
-    white-space: nowrap;
-    /* impede quebra de linha */
-    padding: 8px;
-    scrollbar-width: thin;
-    /* estiliza a barra (Firefox) */
+  display: flex;
+  /* pra alinhar os botões na horizontal */
+  gap: 10px;
+  /* espaço entre botões */
+  overflow-x: auto;
+  /* ativa scroll horizontal */
+  white-space: nowrap;
+  /* impede quebra de linha */
+  padding: 8px;
+  scrollbar-width: thin;
+  /* estiliza a barra (Firefox) */
+}
+
+.sectionButt3 {
+  display: flex;
+  /* pra alinhar os botões na horizontal */
+  gap: 10px;
+  /* espaço entre botões */
+  overflow-x: auto;
+  /* ativa scroll horizontal */
+  white-space: nowrap;
+  /* impede quebra de linha */
+  padding: 8px;
+  scrollbar-width: thin;
+  /* estiliza a barra (Firefox) */
+}
+
+.sectionButt2::-webkit-scrollbar {
+  height: 6px;
+}
+
+.sectionButt2::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 3px;
+}
+
+.sectionButt2::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+.titleBtt {
+  display: flex;
+  flex-direction: column;
+}
+
+.titleBtt p {
+  margin: 0;
+  color: rgb(177, 177, 177);
+  font-family:cursive;
+}
+
+
+
+
+
+@media (min-height: 200px) {
+
+  .display {
+  max-width: 100vw;
+  height: 100vh;
+
+
+}
+
+  .header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: auto;
+  z-index: 20;
+  background: var(--bg);
+  backdrop-filter: blur(6px);
+  border-bottom: 0;
+  height: 50vh;
+  overflow-x: auto; /* 👈 libera o scroll horizontal */
+}
+
+  .preview-wrap {
+    width: auto;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    background: #313131;
+    margin: 0 auto;
   }
 
-  .sectionButt3 {
-    display: flex;
-    /* pra alinhar os botões na horizontal */
-    gap: 10px;
-    /* espaço entre botões */
-    overflow-x: auto;
-    /* ativa scroll horizontal */
-    white-space: nowrap;
-    /* impede quebra de linha */
-    padding: 8px;
-    scrollbar-width: thin;
-    /* estiliza a barra (Firefox) */
+    .grid {
+    width: 100%;
+    height: 50vh;
+    margin: 0 auto;
+    padding: 16px;
+    gap: 16px;
   }
 
-  .sectionButt2::-webkit-scrollbar {
-    height: 6px;
-  }
-
-  .sectionButt2::-webkit-scrollbar-thumb {
-    background: #aaa;
-    border-radius: 3px;
-  }
-
-  .sectionButt2::-webkit-scrollbar-thumb:hover {
-    background: #888;
-  }
-
-@media (min-height: 930px) {
   .card {
     background: var(--card);
     border: 1px solid var(--border);
@@ -412,89 +491,6 @@ body {
     margin: 5px;
   }
 
-  .grid {
-    max-height: auto;
-  }
-
-  .pauta {
-    height: auto;
-  }
-
-
-  .sectionButt2 {
-    display: flex;
-    /* pra alinhar os botões na horizontal */
-    gap: 10px;
-    /* espaço entre botões */
-    overflow-x: auto;
-    /* ativa scroll horizontal */
-    white-space: nowrap;
-    /* impede quebra de linha */
-    padding: 8px;
-    scrollbar-width: thin;
-    /* estiliza a barra (Firefox) */
-  }
-
-  .sectionButt3 {
-    display: flex;
-    /* pra alinhar os botões na horizontal */
-    gap: 10px;
-    /* espaço entre botões */
-    overflow-x: auto;
-    /* ativa scroll horizontal */
-    white-space: nowrap;
-    /* impede quebra de linha */
-    padding: 8px;
-    scrollbar-width: thin;
-    /* estiliza a barra (Firefox) */
-  }
-
-  .sectionButt2::-webkit-scrollbar {
-    height: 6px;
-  }
-
-  .sectionButt2::-webkit-scrollbar-thumb {
-    background: #aaa;
-    border-radius: 3px;
-  }
-
-  .sectionButt2::-webkit-scrollbar-thumb:hover {
-    background: #888;
-  }
-
-}
-
-
-
-@media (min-height: 640px) {
-  .preview-wrap {
-    width: auto;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 16px;
-    background: #313131;
-    margin: 0 auto;
-  }
-
-  .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 14px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
-    height: 310px;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior: contain;
-    margin: 5px;
-  }
-
-  .grid {
-    height: auto;
-  }
-
-
-
   .pauta {
     height: auto;
   }
@@ -506,13 +502,7 @@ body {
     margin: 0 0 12px 0;
   }
 
-  .grid {
-    max-width: 90%;
-    min-height: 300px;
-    margin: 0 auto;
-    padding: 16px;
-    gap: 16px;
-  }
+
 
   .section-tag {
     color: var(--rose);
@@ -586,46 +576,46 @@ body {
 
 
   .sectionButt2 {
-  display: flex;
-  /* pra alinhar os botões na horizontal */
-  gap: 10px;
-  /* espaço entre botões */
-  overflow-x: auto;
-  /* ativa scroll horizontal */
-  white-space: nowrap;
-  /* impede quebra de linha */
-  padding: 8px;
-  scrollbar-width: thin;
-  /* estiliza a barra (Firefox) */
-}
+    display: flex;
+    /* pra alinhar os botões na horizontal */
+    gap: 10px;
+    /* espaço entre botões */
+    overflow-x: auto;
+    /* ativa scroll horizontal */
+    white-space: nowrap;
+    /* impede quebra de linha */
+    padding: 8px;
+    scrollbar-width: thin;
+    /* estiliza a barra (Firefox) */
+  }
 
-.sectionButt3 {
-  display: flex;
-  /* pra alinhar os botões na horizontal */
-  gap: 10px;
-  /* espaço entre botões */
-  overflow-x: auto;
-  /* ativa scroll horizontal */
-  white-space: nowrap;
-  /* impede quebra de linha */
-  padding: 8px;
-  scrollbar-width: thin;
-  /* estiliza a barra (Firefox) */
-}
+  .sectionButt3 {
+    display: flex;
+    /* pra alinhar os botões na horizontal */
+    gap: 10px;
+    /* espaço entre botões */
+    overflow-x: auto;
+    /* ativa scroll horizontal */
+    white-space: nowrap;
+    /* impede quebra de linha */
+    padding: 8px;
+    scrollbar-width: thin;
+    /* estiliza a barra (Firefox) */
+  }
 
-.sectionButt4 {
-  display: flex;
-  /* pra alinhar os botões na horizontal */
-  gap: 10px;
-  /* espaço entre botões */
-  overflow-x: auto;
-  /* ativa scroll horizontal */
-  white-space: nowrap;
-  /* impede quebra de linha */
-  padding: 8px;
-  scrollbar-width: thin;
-  /* estiliza a barra (Firefox) */
-}
+  .sectionButt4 {
+    display: flex;
+    /* pra alinhar os botões na horizontal */
+    gap: 10px;
+    /* espaço entre botões */
+    overflow-x: auto;
+    /* ativa scroll horizontal */
+    white-space: nowrap;
+    /* impede quebra de linha */
+    padding: 8px;
+    scrollbar-width: thin;
+    /* estiliza a barra (Firefox) */
+  }
 
   /* Opcional: estilizar scrollbar (Chrome, Edge, etc.) */
   .sectionButt2::-webkit-scrollbar {
@@ -641,11 +631,9 @@ body {
     background: #888;
   }
 
-  .controlArrow{
+  .controlArrow {
     display: none;
   }
 
-
-
-
 }
+
