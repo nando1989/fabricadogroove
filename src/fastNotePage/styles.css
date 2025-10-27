@@ -482,7 +482,7 @@ body {
     border-radius: 14px;
     padding: 14px;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
-    height: 340px;
+    height: 310px;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior: contain;
@@ -639,6 +639,10 @@ body {
 
   .sectionButt2::-webkit-scrollbar-thumb:hover {
     background: #888;
+  }
+
+  .controlArrow{
+    display: none;
   }
 
 

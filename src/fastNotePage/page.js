@@ -135,27 +135,27 @@ export default function FastNote() {
             )}
 
             <div
-  ref={containerRef}
-  style={{ display: "flex", flexDirection: "column", gap: lineGap }}
->
-  {parsed.map((node, idx) =>
-    node.type === "section" ? (
-      <div key={idx} className="section-tag" style={{ fontSize: fontSize - 6 }}>
-        {node.label}
-      </div>
-    ) : (
-      <div key={idx} className="line" style={{ fontSize }}>
-        {node.tokens?.map((t, i) =>
-          t === "/"
-            ? showBars
-              ? <span key={i} className="bar">/</span>
-              : <span key={i} style={{ width: 8 }} />
-            : <span key={i} className="chord">{t}</span>
-        )}
-      </div>
-    )
-  )}
-</div>
+              ref={containerRef}
+              style={{ display: "flex", flexDirection: "column", gap: lineGap }}
+            >
+              {parsed.map((node, idx) =>
+                node.type === "section" ? (
+                  <div key={idx} className="section-tag" style={{ fontSize: fontSize - 6 }}>
+                    {node.label}
+                  </div>
+                ) : (
+                  <div key={idx} className="line" style={{ fontSize }}>
+                    {node.tokens?.map((t, i) =>
+                      t === "/"
+                        ? showBars
+                          ? <span key={i} className="bar">/</span>
+                          : <span key={i} style={{ width: 8 }} />
+                        : <span key={i} className="chord">{t}</span>
+                    )}
+                  </div>
+                )
+              )}
+            </div>
           </div>
         </section>
       </main>
@@ -165,14 +165,14 @@ export default function FastNote() {
           <div className="controls">
 
             <div className="sectionButt2">
-              <button onClick={() => insertNote(" / ")} className="btn">/ Compasso /</button>
-              <button onClick={breakLine} className="btn">Q.Linha</button>
               <button onClick={() => insertSection("Intro")} className="btn">Intro</button>
-              <button onClick={() => insertSection("Verso")} className="btn">Verso</button>
-              <button onClick={() => insertSection("Refrão")} className="btn">Refrão</button>
-              <button onClick={() => insertSection("Ponte")} className="btn">Ponte</button>
+              <button onClick={() => insertNote(" / ")} className="btn">/ Compasso /</button>
+              <button onClick={breakLine} className="btn">Quebra de Linha</button>
               <button onClick={() => insertSection("Parte A")} className="btn">Parte A</button>
               <button onClick={() => insertSection("Parte B")} className="btn">Parte B</button>
+              <button onClick={() => insertSection("Refrão")} className="btn">Refrão</button>
+              <button onClick={() => insertSection("Verso")} className="btn">Verso</button>
+              <button onClick={() => insertSection("Ponte")} className="btn">Ponte</button>
               <button onClick={() => insertSection("Final")} className="btn">Final</button>
             </div>
 
@@ -184,6 +184,9 @@ export default function FastNote() {
               <button onClick={() => insertNote("G")} className="btnNote">G</button>
               <button onClick={() => insertNote("A")} className="btnNote">A</button>
               <button onClick={() => insertNote("B")} className="btnNote">B</button>
+
+            </div>
+            <div className="sectionButt3">
               <button onClick={() => insertNote("M")} className="btnNote">M</button>
               <button onClick={() => insertNote("m")} className="btnNote">m</button>
               <button onClick={() => insertNote(" 𝄇 ")} className="btnNote">𝄇</button>
@@ -219,11 +222,11 @@ export default function FastNote() {
 
             <div className="controlArrow">
               <div className="control">
-                <label className="control-group">
+                <label className="label control-group">
                   Fonte
                   <input type="range" min={16} max={36} value={fontSize} onChange={(e) => setFontSize(parseInt(e.target.value))} className="range" />
                 </label>
-                <label className="control-group">
+                <label className="label control-group">
                   Espaço
                   <input type="range" min={6} max={24} value={lineGap} onChange={(e) => setLineGap(parseInt(e.target.value))} className="range" />
                 </label>
