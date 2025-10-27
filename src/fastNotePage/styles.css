@@ -447,7 +447,7 @@ body {
 
 
 
-@media (min-height: 780px) {
+@media (min-height: 640px) {
   .preview-wrap {
     width: auto;
     border: 1px solid var(--border);
