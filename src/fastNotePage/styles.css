@@ -482,7 +482,7 @@ body {
     border-radius: 14px;
     padding: 14px;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
-    height: 500px;
+    height: 340px;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior: contain;
