@@ -158,14 +158,14 @@ export default function FastNote() {
             </div>
           </div>
         </section>
-      </main>
+      </main> 
 
       <header className="header">
         <div className="container">
           <div className="controls">
             <div className="areaBtt">
               <div className="sectionButt1">
-              <Space onClick={() => insertNote("   ")} className="btnSpace" />
+              <Space onClick={() => insertNote("    ")} className="btnSpace" />
               <Undo2 size={10} onClick={() => DeleteLast()} className="btnEraser" />
               <Download onClick={handleExportPNG} className="btnDownload" />
             </div>
