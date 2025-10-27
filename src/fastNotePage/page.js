@@ -1,6 +1,9 @@
 "use client";
 import { useEffect, useMemo, useRef, useState } from "react";
 import "./styles.css";
+import { Undo2 } from 'lucide-react';
+import { Space } from 'lucide-react';
+import { Download } from 'lucide-react';
 
 export default function FastNote() {
   const [text, setText] = useState("");
@@ -20,7 +23,7 @@ export default function FastNote() {
     if (!el) return;
     el.focus({ preventScroll: true });
     requestAnimationFrame(() => {
-      el.setSelectionRange(0, el.value.length); // seleciona tudo
+      el.setSelectionRange(0, el.value.length);
     });
   }, [isEditingTitle]);
 
@@ -88,7 +91,12 @@ export default function FastNote() {
   async function handleExportPNG() {
     if (!exportRef.current) return;
     const html2canvas = (await import("html2canvas")).default;
-    const canvas = await html2canvas(exportRef.current, { scale: 3, backgroundColor: "#ffffff" });
+    const canvas = await html2canvas(exportRef.current, {
+      scale: 3,
+      backgroundColor: "#ffffff",
+      x: -10, 
+      y: -10, 
+    });
     const url = canvas.toDataURL("image/png");
     const a = document.createElement("a");
     a.href = url; a.download = `arranjo-${Date.now()}.png`; a.click();
@@ -98,7 +106,7 @@ export default function FastNote() {
     <div>
       <main className="grid">
         <section className="card" style={{ overflow: "auto" }}>
-          <div ref={exportRef} className="bg-white p-6 md:p-8 rounded-lg shadow"
+          <div ref={exportRef} className="pauta"
           >
             {isEditingTitle ? (
               <input
@@ -145,50 +153,60 @@ export default function FastNote() {
       <header className="header">
         <div className="container">
           <div className="controls">
-            <button onClick={breakLine} className="btn">Q.Linha</button>
-            <button onClick={() => insertSection("Intro")} className="btn">Intro</button>
-            <button onClick={() => insertSection("Verso")} className="btn">Verso</button>
-            <button onClick={() => insertSection("Refrão")} className="btn">Refrão</button>
-            <button onClick={() => insertSection("Ponte")} className="btn">Ponte</button>
-            <button onClick={() => insertSection("Parte A")} className="btn">Parte A</button>
-            <button onClick={() => insertSection("Parte B")} className="btn">Parte B</button>
-            <button onClick={() => insertSection("Final")} className="btn">Final</button>
-            <button onClick={() => insertNote(" / ")} className="btn">Compasso</button>
-            <button onClick={() => DeleteLast()} className="btnEraser">Apagar</button>
-            <button onClick={() => insertNote(" / ")} className="btnEraser">Limpar</button>
 
-            <button onClick={() => insertNote("C")} className="btnNote">C</button>
-            <button onClick={() => insertNote("D")} className="btnNote">D</button>
-            <button onClick={() => insertNote("E")} className="btnNote">E</button>
-            <button onClick={() => insertNote("F")} className="btnNote">F</button>
-            <button onClick={() => insertNote("G")} className="btnNote">G</button>
-            <button onClick={() => insertNote("A")} className="btnNote">A</button>
-            <button onClick={() => insertNote("B")} className="btnNote">B</button>
-            <button onClick={() => insertNote("M")} className="btnNote">M</button>
+            <div className="sectionButt2">
+              <button onClick={() => insertNote(" / ")} className="btn">/ Compasso /</button>
+              <button onClick={breakLine} className="btn">Q.Linha</button>
+              <button onClick={() => insertSection("Intro")} className="btn">Intro</button>
+              <button onClick={() => insertSection("Verso")} className="btn">Verso</button>
+              <button onClick={() => insertSection("Refrão")} className="btn">Refrão</button>
+              <button onClick={() => insertSection("Ponte")} className="btn">Ponte</button>
+              <button onClick={() => insertSection("Parte A")} className="btn">Parte A</button>
+              <button onClick={() => insertSection("Parte B")} className="btn">Parte B</button>
+              <button onClick={() => insertSection("Final")} className="btn">Final</button>
+            </div>
 
-            <button onClick={() => insertNote("m")} className="btnNote">m</button>
-            <button onClick={() => insertNote("7°")} className="tenctions">7°</button>
-            <button onClick={() => insertNote("9°")} className="tenctions">9°</button>
-            <button onClick={() => insertNote("11°")} className="tenctions">11°</button>
-            <button onClick={() => insertNote("13°")} className="tenctions">13°</button>
-            <button onClick={() => insertNote("7M")} className="tenctions">7M</button>
-            <button onClick={() => insertNote("9°")} className="tenctions">9°</button>
-            <button onClick={() => insertNote("9°+")} className="tenctions">9°</button>
-            <button onClick={() => insertNote("9b")} className="tenctions">9</button>
-            <button onClick={() => insertNote("11")} className="tenctions">11</button>
-            <button onClick={() => insertNote("13°")} className="tenctions">13°</button>
-            <button onClick={() => insertNote("13°+")} className="tenctions">13°+</button>
-            <button onClick={() => insertNote("13°b")} className="tenctions">13°b</button>
-            <button onClick={() => insertNote("b5")} className="tenctions">b5</button>
-            <button onClick={() => insertNote("4+")} className="tenctions">4+</button>
+            <div className="sectionButt3">
+              <button onClick={() => insertNote("C")} className="btnNote">C</button>
+              <button onClick={() => insertNote("D")} className="btnNote">D</button>
+              <button onClick={() => insertNote("E")} className="btnNote">E</button>
+              <button onClick={() => insertNote("F")} className="btnNote">F</button>
+              <button onClick={() => insertNote("G")} className="btnNote">G</button>
+              <button onClick={() => insertNote("A")} className="btnNote">A</button>
+              <button onClick={() => insertNote("B")} className="btnNote">B</button>
+              <button onClick={() => insertNote("M")} className="btnNote">M</button>
+              <button onClick={() => insertNote("m")} className="btnNote">m</button>
+              <button onClick={() => insertNote(" 𝄇 ")} className="btnNote">𝄇</button>
+              <button onClick={() => insertNote(" 2x")} className="btnNote">2x</button>
+              <button onClick={() => insertNote(" 3x")} className="btnNote">3x</button>
+              <button onClick={() => insertNote("#")} className="btnNote">#</button>
+              <button onClick={() => insertNote("b")} className="btnNote">b</button>
+            </div>
 
-            <button onClick={() => insertNote("°")} className="btnSimbol">°</button>
-            <button onClick={() => insertNote(" (2x)")} className="btnSimbol">2x</button>
-            <button onClick={() => insertNote(" (3x)")} className="btnSimbol">3x</button>
-            <button onClick={() => insertNote(" (4x)")} className="btnSimbol">4x</button>
-            <button onClick={() => insertNote("#")} className="btnSimbol">#</button>
-            <button onClick={() => insertNote("b")} className="btnSimbol">b</button>
-            <button onClick={() => insertNote("   ")} className="btnSimbol">Espaço</button>
+            <div className="sectionButt4">
+              <button onClick={() => insertNote("7°")} className="tenctions">7°</button>
+              <button onClick={() => insertNote("9°")} className="tenctions">9°</button>
+              <button onClick={() => insertNote("11°")} className="tenctions">11°</button>
+              <button onClick={() => insertNote("13°")} className="tenctions">13°</button>
+              <button onClick={() => insertNote("7M")} className="tenctions">7M</button>
+              <button onClick={() => insertNote("6°")} className="tenctions">6°</button>
+              <button onClick={() => insertNote("6b")} className="tenctions">6b</button>
+              <button onClick={() => insertNote("9°")} className="tenctions">9°</button>
+              <button onClick={() => insertNote("9°+")} className="tenctions">9°+</button>
+              <button onClick={() => insertNote("9b")} className="tenctions">9b</button>
+              <button onClick={() => insertNote("11")} className="tenctions">11</button>
+              <button onClick={() => insertNote("13°")} className="tenctions">13°</button>
+              <button onClick={() => insertNote("13°+")} className="tenctions">13°+</button>
+              <button onClick={() => insertNote("13°b")} className="tenctions">13°b</button>
+              <button onClick={() => insertNote("b5")} className="tenctions">b5</button>
+              <button onClick={() => insertNote("4+")} className="tenctions">4+</button>
+              <button onClick={() => insertNote("°")} className="tenctions">°</button>
+            </div>
+            <div className="sectionButt1">
+              <Space onClick={() => insertNote("   ")} className="btnSpace" />
+              <Undo2 size={10} onClick={() => DeleteLast()} className="btnEraser" />
+              <Download onClick={handleExportPNG} className="btnDownload" />
+            </div>
 
             <div className="controlArrow">
               <div className="control">
@@ -204,18 +222,12 @@ export default function FastNote() {
                   Largura
                   <input type="range" min={480} max={960} step={20} value={colWidth} onChange={(e) => setColWidth(parseInt(e.target.value))} className="range" />
                 </label>
-
               </div>
-              
             </div>
           </div>
-
-
-          <button onClick={handleExportPNG} className="btn-primary">Exportar PNG</button>
         </div>
       </header>
-
-      <footer className="footer">Feito para escrever arranjos em minutos. 💪🎶</footer>
     </div>
+
   );
 }
