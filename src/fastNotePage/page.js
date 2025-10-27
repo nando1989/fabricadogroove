@@ -90,11 +90,14 @@ export default function FastNote() {
   async function handleExportPNG() {
     if (!exportRef.current) return;
     const html2canvas = (await import("html2canvas")).default;
+    const rect = exportRef.current.getBoundingClientRect();
     const canvas = await html2canvas(exportRef.current, {
       scale: 3,
       backgroundColor: "#ffffff",
       x: -10,
       y: -10,
+      width: rect.width + 20,  // aumenta largura 10px de cada lado
+      height: rect.height + 20,
     });
     const url = canvas.toDataURL("image/png");
     const a = document.createElement("a");
@@ -158,17 +161,17 @@ export default function FastNote() {
             </div>
           </div>
         </section>
-      </main> 
+      </main>
 
       <header className="header">
         <div className="container">
           <div className="controls">
             <div className="areaBtt">
               <div className="sectionButt1">
-              <Space onClick={() => insertNote("    ")} className="btnSpace" />
-              <Undo2 size={10} onClick={() => DeleteLast()} className="btnEraser" />
-              <Download onClick={handleExportPNG} className="btnDownload" />
-            </div>
+                <Space onClick={() => insertNote("    ")} className="btnSpace" />
+                <Undo2 size={10} onClick={() => DeleteLast()} className="btnEraser" />
+                <Download onClick={handleExportPNG} className="btnDownload" />
+              </div>
               <div className="titleBtt"><p>Trechos</p></div>
               <div className="sectionButt2">
                 <button onClick={() => insertSection("Intro")} className="btnNote">Intro</button>
@@ -196,7 +199,7 @@ export default function FastNote() {
             <div className="areaBtt">
               <div className="titleBtt"><p>Simbolos</p></div>
               <div className="sectionButt3">
-                
+
                 <button onClick={() => insertNote("M")} className="btnNote">M</button>
                 <button onClick={() => insertNote("m")} className="btnNote">m</button>
                 <button onClick={() => insertNote("#")} className="btnNote">#</button>
@@ -205,7 +208,7 @@ export default function FastNote() {
                 <button onClick={() => insertNote(" 𝄇 ")} className="btnNote">𝄇</button>
                 <button onClick={() => insertNote(" 2x")} className="btnNote">2x</button>
                 <button onClick={() => insertNote(" 3x")} className="btnNote">3x</button>
-                
+
               </div>
             </div>
             <div className="areaBtt">
@@ -229,7 +232,7 @@ export default function FastNote() {
                 <button onClick={() => insertNote("°")} className="tenctions">°</button>
               </div>
             </div>
-            
+
 
             <div className="controlArrow">
               <div className="control">
