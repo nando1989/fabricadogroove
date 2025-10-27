@@ -94,13 +94,16 @@ export default function FastNote() {
     const canvas = await html2canvas(exportRef.current, {
       scale: 3,
       backgroundColor: "#ffffff",
-      x: -10, 
-      y: -10, 
+      x: -10,
+      y: -10,
     });
     const url = canvas.toDataURL("image/png");
     const a = document.createElement("a");
     a.href = url; a.download = `arranjo-${Date.now()}.png`; a.click();
   }
+
+  const containerRef = useRef(null);
+
 
   return (
     <div>
@@ -132,20 +135,28 @@ export default function FastNote() {
               </h2>
             )}
 
-            <div style={{ display: "flex", flexDirection: "column", gap: lineGap }}>
-              {parsed.map((node, idx) =>
-                node.type === "section" ? (
-                  <div key={idx} className="section-tag" style={{ fontSize: fontSize - 6 }}>{node.label}</div>
-                ) : (
-                  <div key={idx} className="line" style={{ fontSize }}>
-                    {node.tokens?.map((t, i) => t === "/"
-                      ? (showBars ? <span key={i} className="bar">/</span> : <span key={i} style={{ width: 8 }} />)
-                      : <span key={i} className="chord">{t}</span>
-                    )}
-                  </div>
-                )
-              )}
-            </div>
+            <div
+  ref={containerRef}
+  style={{ display: "flex", flexDirection: "column", gap: lineGap }}
+>
+  {parsed.map((node, idx) =>
+    node.type === "section" ? (
+      <div key={idx} className="section-tag" style={{ fontSize: fontSize - 6 }}>
+        {node.label}
+      </div>
+    ) : (
+      <div key={idx} className="line" style={{ fontSize }}>
+        {node.tokens?.map((t, i) =>
+          t === "/"
+            ? showBars
+              ? <span key={i} className="bar">/</span>
+              : <span key={i} style={{ width: 8 }} />
+            : <span key={i} className="chord">{t}</span>
+        )}
+      </div>
+    )
+  )}
+</div>
           </div>
         </section>
       </main>
@@ -185,10 +196,9 @@ export default function FastNote() {
 
             <div className="sectionButt4">
               <button onClick={() => insertNote("7°")} className="tenctions">7°</button>
-              <button onClick={() => insertNote("9°")} className="tenctions">9°</button>
+              <button onClick={() => insertNote("7M")} className="tenctions">7M</button>
               <button onClick={() => insertNote("11°")} className="tenctions">11°</button>
               <button onClick={() => insertNote("13°")} className="tenctions">13°</button>
-              <button onClick={() => insertNote("7M")} className="tenctions">7M</button>
               <button onClick={() => insertNote("6°")} className="tenctions">6°</button>
               <button onClick={() => insertNote("6b")} className="tenctions">6b</button>
               <button onClick={() => insertNote("9°")} className="tenctions">9°</button>
@@ -210,18 +220,18 @@ export default function FastNote() {
 
             <div className="controlArrow">
               <div className="control">
-                <label className="label control-group">
+                <label className="control-group">
                   Fonte
                   <input type="range" min={16} max={36} value={fontSize} onChange={(e) => setFontSize(parseInt(e.target.value))} className="range" />
                 </label>
-                <label className="label control-group">
+                <label className="control-group">
                   Espaço
                   <input type="range" min={6} max={24} value={lineGap} onChange={(e) => setLineGap(parseInt(e.target.value))} className="range" />
                 </label>
-                <label className="label control-group">
+                {/* <label className="control-groupl">
                   Largura
                   <input type="range" min={480} max={960} step={20} value={colWidth} onChange={(e) => setColWidth(parseInt(e.target.value))} className="range" />
-                </label>
+                </label> */}
               </div>
             </div>
           </div>
