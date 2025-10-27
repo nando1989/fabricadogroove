@@ -357,6 +357,46 @@ body {
   width: 16px;
   height: 16px;
 }
+.sectionButt2 {
+    display: flex;
+    /* pra alinhar os botões na horizontal */
+    gap: 10px;
+    /* espaço entre botões */
+    overflow-x: auto;
+    /* ativa scroll horizontal */
+    white-space: nowrap;
+    /* impede quebra de linha */
+    padding: 8px;
+    scrollbar-width: thin;
+    /* estiliza a barra (Firefox) */
+  }
+
+  .sectionButt3 {
+    display: flex;
+    /* pra alinhar os botões na horizontal */
+    gap: 10px;
+    /* espaço entre botões */
+    overflow-x: auto;
+    /* ativa scroll horizontal */
+    white-space: nowrap;
+    /* impede quebra de linha */
+    padding: 8px;
+    scrollbar-width: thin;
+    /* estiliza a barra (Firefox) */
+  }
+
+  .sectionButt2::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .sectionButt2::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 3px;
+  }
+
+  .sectionButt2::-webkit-scrollbar-thumb:hover {
+    background: #888;
+  }
 
 @media (min-height: 930px) {
   .card {
